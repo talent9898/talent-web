@@ -1,0 +1,338 @@
+/* FULL STYLES.CSS IMPROVED HEADER, SECTIONS, AND FONTS */
+:root {
+    --blue: #0056a6;
+    --orange: #ff7a00;
+    --white: #ffffff;
+    --gray: #f4f4f4;
+    --text-dark: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--gray);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+/* GLOBAL CONTAINER STYLE */
+.container {
+    width: 90%;
+    max-width: 1200px; /* prevents content from stretching too much on large screens */
+    margin: 0 auto;    /* centers content horizontally */
+    padding: 0 15px;   /* small padding for breathing space */
+}
+
+
+/* HEADER */
+/* ORIGINAL HEADER STYLE */
+header {
+    background: var(--blue);
+    color: var(--white);
+    padding: 15px 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--orange);
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    background: url('images/home1.jpeg');
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.hero h1 {
+    background: rgba(0,0,0,0.5);
+    padding: 25px 30px;
+    border-radius: 12px;
+    font-size: 36px;
+    font-weight: 700;
+    animation: fadeIn 2s ease-in-out;
+    line-height: 1.2;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    color: var(--blue);
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+    animation: slideUp 1s ease;
+}
+
+@keyframes slideUp {
+    from {opacity:0; transform: translateY(30px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+/* WHY US */
+.why-us {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.why-box {
+    background: var(--white);
+    padding: 25px;
+    border-left: 6px solid var(--orange);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+}
+
+.why-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+/* SERVICES */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.service-box {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 6px solid var(--blue);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box h3 {
+    font-size: 20px;
+    color: var(--blue);
+    margin-bottom: 12px;
+}
+
+.service-box p {
+    font-size: 16px;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+/* DETAILS */
+details {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--orange);
+    font-size: 16px;
+}
+
+summary {
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+/* UPDATES */
+.updates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.update-box {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    border-left: 6px solid var(--orange);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.update-box h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--blue);
+}
+
+.update-box p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.update-box img, .update-box video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.update-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+/* CONTACT */
+.contact-box {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form input, form textarea {
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form button {
+    padding: 14px;
+    background: var(--orange);
+    border: none;
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+form button:hover {
+    background: darkorange;
+}
+
+/* FOOTER */
+footer {
+    background: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 35px 10%;
+    margin-top: auto;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.1);
+    font-size: 16px;
+}
+
+/* RESPONSIVE NAVIGATION */
+@media(max-width: 900px) {
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--blue);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 220px;
+        padding: 20px;
+        border-radius: 0 0 0 12px;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: var(--white);
+    }
+
+    .nav-links a {
+        margin: 15px 0;
+        font-size: 18px;
+    }
+}
