@@ -98,7 +98,7 @@ nav a:hover {
 
 /* HERO */
 .hero {
-    background: url('images/home1.jpeg');
+    background: url('home1.jpeg');
     height: 70vh;
     background-size: cover;
     background-position: center;
@@ -335,4 +335,5 @@ footer {
         margin: 15px 0;
         font-size: 18px;
     }
+
 }
