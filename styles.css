@@ -337,3 +337,51 @@ footer {
     }
 
 }
+/* Footer Social Icons */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-socials img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s ease;
+}
+
+.footer-socials img:hover {
+  transform: scale(1.2);
+}
+
+/* Designer Credits */
+footer .designer {
+  text-align: center;
+  font-size: 14px;
+  color: #ddd;
+}
+
+footer .designer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .designer a:hover {
+  text-decoration: underline;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float img {
+  position: fixed;
+  width: 55px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+
